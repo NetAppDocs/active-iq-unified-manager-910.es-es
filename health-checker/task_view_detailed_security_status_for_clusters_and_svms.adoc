@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_view_detailed_security_status_for_clusters_and_svms.html 
+sidebar: sidebar 
+keywords: view, cluster security status, svm security status, volume encryption status 
+summary: La página Security muestra el estado de seguridad de alto nivel de todos los clústeres, así como el estado de seguridad detallado de cada clúster. El estado detallado del clúster incluye cumplimiento de normativas, cumplimiento de normativas de SVM y cumplimiento de normativas de cifrado de volúmenes. 
+---
+= Visualización detallada del estado de seguridad para clústeres y máquinas virtuales de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Security muestra el estado de seguridad de alto nivel de todos los clústeres, así como el estado de seguridad detallado de cada clúster.
+
+Como administrador del sistema, puede utilizar la página *Seguridad* para obtener visibilidad de la seguridad de los clústeres de ONTAP y de los equipos virtuales de almacenamiento en los centros de datos y el sitio.
+
+Según los parámetros definidos, se puede recopilar y analizar información para detectar comportamientos sospechosos o cambios del sistema no autorizados en los clústeres supervisados y las máquinas virtuales de almacenamiento.
+
+El estado detallado del clúster incluye cumplimiento de normativas, cumplimiento de normativas de SVM y cumplimiento de normativas de cifrado de volúmenes.
+
+La página de detalles Cluster / Security ofrece una vista predeterminada del cumplimiento de seguridad de los clústeres comprobando los parámetros de seguridad, como Global FIPS, Telnet, configuración de SSH insegura, banner de inicio de sesión, protocolo de hora de red, Transporte HTTPS de AutoSupport y administradores predeterminados.
+
+La página de detalles Storage VMs/ Security ofrece una vista predeterminada del cumplimiento de seguridad de las máquinas virtuales de almacenamiento comprobando los parámetros de seguridad, como las máquinas virtuales de almacenamiento, el clúster, el banner de inicio de sesión, el registro de auditoría y la configuración SSH no segura.
+
+También puede generar, programar y descargar informes de cumplimiento de normativas de seguridad en las páginas de detalles de máquinas virtuales de clúster y almacenamiento.
+
+En *Panel de seguridad*, haga clic en *Ver informes* en las tarjetas *Cluster Compliance* y *Storage VMs Compliance*.
+
+.Pasos
+. En el panel de navegación de la izquierda, haga clic en *Panel*.
+. En función de si desea ver el estado de seguridad de todos los clústeres supervisados o de un único clúster, seleccione *todos los clústeres* o seleccione un único clúster en el menú desplegable.
+. Haga clic en la flecha derecha del panel *Seguridad*.
++
+La página Seguridad muestra la siguiente información:
+
++
+** el estado de seguridad del clúster (número de clústeres que son compatibles o no)
+** El estado de seguridad de SVM (número de SVM que son compatibles o no)
+** el estado de cifrado de volúmenes (número de volúmenes cifrados o no cifrados).
+** los métodos de autenticación de clúster que se están usando en cada clúster
+
+
+. Consulte la http://www.netapp.com/us/media/tr-4569.pdf["Guía de fortalecimiento de la seguridad de NetApp para ONTAP 9"] Para obtener instrucciones sobre cómo hacer que todos los clústeres, SVM y volúmenes cumplan con las recomendaciones de seguridad de NetApp.
+

@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_view_svm_associations.html 
+sidebar: sidebar 
+keywords: view, storage, vm peers 
+summary: Puede usar la página Storage VM parpares para ver los pares de VM de almacenamiento existentes y sus propiedades, y para determinar si se necesitan más máquinas virtuales de almacenamiento. 
+---
+= Ver empresas de iguales de máquinas virtuales de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Storage VM parpares para ver los pares de VM de almacenamiento existentes y sus propiedades, y para determinar si se necesitan más máquinas virtuales de almacenamiento.
+
+*Lo que necesitará*
+
+Debe tener el rol de administrador de aplicaciones o de administrador del almacenamiento.
+
+.Paso
+. En el panel de navegación izquierdo, haga clic en *Protección* > *Storage VM peers*.
++
+Se muestra la lista de compañeros de las máquinas virtuales de almacenamiento y sus propiedades.
+
+

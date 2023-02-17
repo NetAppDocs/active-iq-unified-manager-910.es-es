@@ -1,0 +1,74 @@
+---
+permalink: data-protection/view-protection-status.html 
+sidebar: sidebar 
+keywords: view, volume, protection status, dashboard protection card, protection panel, protection widget 
+summary: La página Data Protection presenta una vista holística de los detalles de la protección de datos de todos los volúmenes protegidos en su centro de datos. 
+---
+= Ver el estado de protección de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Data Protection presenta una vista holística de los detalles de la protección de datos de todos los volúmenes protegidos en un único clúster, o todos los clústeres de un centro de datos.
+
+Puede ver estos detalles si hace clic en la flecha derecha situada en la parte superior del panel Data Protection del panel. Hay dos secciones en esta pantalla. Cuando selecciona todos los clústeres en la consola, la sección *todos los clústeres* muestra el estado de protección de todos los clústeres a nivel de centro de datos protegido por las relaciones de SnapMirror y la copia Snapshot. Puede seleccionar un clúster específico en la sección *clúster individual* para ver el estado de los volúmenes protegidos de ese clúster.
+
+Si selecciona un solo clúster en la consola, esta página muestra los detalles de los volúmenes protegidos en ese clúster.
+
+Puede pasar el ratón por encima de cada uno de los gráficos de barras para ver los recuentos respectivos. Al hacer clic en los gráficos de barras, se abre la pantalla Volumes con los volúmenes correspondientes seleccionados. Al hacer clic en el enlace de cada uno de estos eventos, se abre la página de detalles Event. Puede hacer clic en el enlace *Ver todo* para ver todos los eventos de protección activos en la página de inventario de Event Management.
+
+.Pasos
+. En el panel de navegación de la izquierda, haga clic en *Panel*.
+. En función de si desea ver el estado de protección de datos de todos los clústeres supervisados o de un solo clúster, seleccione *todos los clústeres* o seleccione un único clúster en el menú desplegable.
+. Haga clic en la flecha derecha del panel Data Protection.
+
+
+
+
+== Página Data Protection
+
+La página Data Protection muestra los siguientes paneles para los volúmenes protegidos de todos los clústeres.
+
+
+NOTE: Para el número de volúmenes de las copias de Snapshot, se consideran los volúmenes de origen y destino. Para las relaciones de SnapMirror, se cuentan los volúmenes de origen, que se habilitan para la lectura y la escritura. Los volúmenes de destino y raíz no se consideran. El recuento de SnapMirror incluye la cantidad de volúmenes con orígenes y destinos en los clústeres iguales o diferentes.
+
+* *Descripción general de Snapshot*: Descripción general de los volúmenes protegidos por copias Snapshot, como:
++
+** La cantidad total de volúmenes protegidos y sin protección mediante copias Snapshot.
++
+
+NOTE: Para considerar un volumen como protegido, se debe habilitar la programación para la copia Snapshot del volumen.
+
+** El número total de volúmenes que utilizan o superan el espacio de reserva para las copias Snapshot. Este valor es importante para ver la cantidad de espacio en disco utilizado o calcular el espacio que puede reclamarse si se han eliminado una o más copias de Snapshot.
+
+
+* *Descripción general de SnapMirror*: Descripción general de los volúmenes protegidos por políticas de SnapMirror, como:
++
+** El número de volúmenes protegidos por las respectivas políticas de SnapMirror, como las relaciones de SnapMirror para volúmenes, la recuperación ante desastres de las máquinas virtuales de almacenamiento (SVM-DR) y sus combinaciones.
+** El número total de volúmenes que tienen retraso en relaciones de SnapMirror. Si un volumen tiene varias relaciones de SnapMirror, se selecciona el peor desfase.
+
+
+
+
+La lista de clústeres individuales muestra el estado de las relaciones de SnapMirror y la protección Snapshot para un clúster específico.
+
+* *Análisis de copias Snapshot* detalla la siguiente información:
++
+** Eventos individuales para copias Snapshot, incluidos los eventos realizados en las últimas 24 horas.
+** Gráfico detallado para volúmenes protegidos y no protegidos por copias Snapshot
+** Volúmenes que utilizan, no utilizan y abrevian la capacidad reservada de la copia Snapshot. Puede usar esta información para calcular el espacio utilizado o puede reclamarse si se han eliminado una o más copias de Snapshot.
+** La división del volumen en términos del número de sus copias Snapshot. El número de copias Snapshot que se devuelven solo es para los volúmenes en línea y disponibles.
+
+
+* *Análisis de SnapMirror* detalla la siguiente información:
++
+** Eventos individuales planteados para las relaciones de SnapMirror, incluidos los eventos de las últimas 24 horas
+** La cantidad de volúmenes protegidos por cada una de las políticas de SnapMirror, como las relaciones de SnapMirror de volúmenes, la recuperación ante desastres de las máquinas virtuales de almacenamiento (SVM-DR) y sus combinaciones.
+** La cantidad de volúmenes protegidos por los tipos de relaciones de SnapMirror, como Asynchronous Mirror, Asynchronous Vault, Asynchronous Mirror Vault, StrictSync, grupo de coherencia SnapMirror Business Continuity (SMBC) y Sync.
+** La cantidad de volúmenes con estado de relación en buen estado o mal estado. Un volumen se considera en buen estado solo si todas sus relaciones de SnapMirror están en buen estado.
+** Desglose del volumen según la tasa de retraso del objetivo de punto de recuperación (RPO).
+
+
+
